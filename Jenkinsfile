@@ -41,7 +41,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                sh "docker run -d -p 8080:8080 your-docker-image:${BUILD_NUMBER}"
+                sh "docker run -d -p 8888:8080 ${dockerImageName}"
             }
         }
     }
